@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Montserrat:ital,wght@0,600;1,600&display=swap');
+
+@keyframes appear { 
+  from {
+    opacity: 0;
+    transform: scale(0.5); /* Use transform for scaling */
+  }
+  to {
+    opacity: 1;
+    transform: scale(1); /* Use transform for scaling */
+  }
+}
+
+.frontendcon, .backendcon { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 90%;
+  gap: 30px;
+  padding: 10px;
+  margin-left: 5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 820px) {
+  .frontendcon, .backendcon { 
+    width: 100%;
+    margin-left: 0;
+    gap: 20px;
+    padding: 5px;
+  }
+
+  .skillcontainer h2, .skillcontainer h1 {
+    margin-left: 0;
+    text-align: left;
+  }
+  
+  .frontendcon > div, .backendcon > div {
+    width: 90%;
+    height: auto; 
+  }
+}
+
+.skillcontainer h2 {
+  font-family: "Montserrat", sans-serif; /* Corrected font family */
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 10rem;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.skillcontainer h1 {
+  padding-top: 4rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 50px;
+  font-family: "Montserrat", sans-serif;
+  color:white;
+}
+
+.skillcontainer_slider .MuiLinearProgress-barColorPrimary {
+    background-color: rgb(16, 85, 141); /* Adjusted color */
+    border: 3px solid rgb(2, 42, 65);
+  }
+  
+  .skillcontainer_slider {
+    width: 100%; /* Adjusted to fit the container */
+    height: fit-content;
+    margin-top: 3rem;
+  }
+  
+
+.frontendcon > div, .backendcon > div { 
+  background-color: transparent; 
+  padding: 10px;
+  /* border: 2px solid #ccc; */
+  border: 3px solid rgb(2, 42, 65);
+  border-radius: 5px;
+  width: 500px;
+  height: 150px; 
+  color:black; /* Default text color */
+  position: relative; /* Ensure child elements are positioned relative to this div */
+  z-index: 1; /* Ensure text stays above background */
+  overflow: hidden; /* Ensure the moving background doesn't overflow */
+  animation: appear linear; 
+  animation-timeline: view(); 
+  animation-range: entry 0% cover 40%;
+}
+
+.frontendcon > div::before, .backendcon > div::before { 
+  content: "";
+  position: absolute;
+  top: 0; 
+  left: -100%; /* Start from outside the left edge */ 
+  width: 200%;
+  height: 100%;
+  background-color: hwb(0 87% 13% / 0.911); /* Background color */ 
+  transition: left 0.5s; /* Smooth transition */
+  z-index: -1; /* Ensure background stays behind text */
+  
+}
+
+.frontendcon > div:hover::before, .backendcon > div:hover::before {
+  left: 100%; /* Move the background to the right */
+}
+
+.frontendcon > div:hover, .backendcon > div:hover {
+  color:white; /* Ensure text color remains black on hover */
+}

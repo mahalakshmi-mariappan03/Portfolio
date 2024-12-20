@@ -1,0 +1,43 @@
+.footer {
+  background-color: transparent;
+  padding: 20px 0;
+  text-align: center;
+  height: 6rem;
+}
+
+.footer-content {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding-top: 15px;
+  margin: 0;
+  height: 5rem;
+}
+.footer-content p{
+  margin-left: 4rem;
+}
+
+.back {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.back-to-top-button {
+  background-color: darkblue;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px 20px;
+  font-size: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 1rem;
+}
+
+.back-to-top-button:hover {
+  background-color: #333;
+}

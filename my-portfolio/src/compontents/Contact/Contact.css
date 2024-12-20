@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Montserrat:ital,wght@0,600;1,600&display=swap');
+
+#input-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+#input-container label {
+  position: absolute;
+  top: -10px;
+  left: 15px;
+  background: aqua;
+  padding: 0 5px;
+  color: black;
+  font-size: 16px;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+#input-container input:focus + label,
+#input-container input:not(:placeholder-shown) + label,
+#input-container textarea:focus + label,
+#input-container textarea:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 15px;
+  font-size: 12px;
+  color: #333;
+  background: aqua;
+}
+
+.container {
+  background-color: transparent;
+  border-radius: 10px;
+  width: 50%;
+  height: 100%;
+  border: 3px solid rgb(2, 42, 65);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 3rem;
+  color: aqua;
+}
+
+.contact {
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.contactPageTitle {
+  font-size: xx-large;
+  text-align: center;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  padding-bottom: 5rem;
+}
+
+form {
+  width: 50%;
+  height: 80%;
+  text-align: center;
+  background: transparent;
+  color: aqua;
+}
+
+form input {
+  border: 2px solid aqua;
+  background-color: transparent;
+  height: 4rem;
+  width: 25rem;
+  padding-bottom: 20px;
+  color: aqua; /* Change text color to aqua */
+  font-size: 18px; /* Change font size */
+  font-family: "Montserrat", sans-serif; /* Change font family */
+  text-align: center; /* Center the text */
+}
+
+form textarea {
+  border: 2px solid aqua;
+  background-color: transparent;
+  width: 25rem;
+  height: 8rem;
+  color: aqua; /* Change text color to aqua */
+  font-size: 18px; /* Change font size */
+  font-family: "Montserrat", sans-serif; /* Change font family */
+  text-align: center; /* Center the text */
+}
+
+@keyframes appear { 
+  from {
+    opacity: 0;
+    transform: scale(0.5); /* Use transform for scaling */
+  }
+  to {
+    opacity: 1;
+    transform: scale(1); /* Use transform for scaling */
+  }
+}
+
+form button {
+  border: 2px solid rgb(4, 39, 56);
+  background-color: aqua;
+  border-radius: 5px;
+  width: 10rem;
+  height: 4rem;
+  margin-left: 55%;
+  animation: appear linear; 
+  animation-timeline: view(); 
+  animation-range: entry 0% cover 40%;
+  position: relative; /* Ensure child elements are positioned relative to this button */
+  overflow: hidden; /* Ensure the moving background doesn't overflow */
+  z-index: 1; /* Ensure text stays above background */
+  color: black; /* Default text color */
+  font-size: 20px; /* Change font size */
+  font-family: "Montserrat", sans-serif; /* Change font family */
+  text-align: center; /* Center the text */
+  font-weight: 300;
+}
+
+form button::before {
+  content: "";
+  position: absolute;
+  top: 0; 
+  left: -100%; /* Start from outside the left edge */ 
+  width: 200%;
+  height: 100%;
+  background-color: transparent; /* Background color */
+  transition: left 0.5s; /* Smooth transition */
+  z-index: -1; /* Ensure background stays behind text */
+}
+
+form button:hover::before {
+  left: 100%; /* Move the background to the right */
+  background-color: transparent;
+}
+
+form button:hover {
+  color: white; /* Change text color on hover */
+}
+
+.success-message {
+  color: green;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.error-message {
+  color: red;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 820px) {
+  .container {
+    width: 70%;
+  }
+
+  form {
+    width: 70%;
+  }
+
+  form input,
+  form textarea {
+    width: 20rem;
+    font-size: 16px;
+  }
+
+  form button {
+    width: 8rem;
+    height: 3rem;
+    margin-left: 50%;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 90%;
+    margin-left: 1rem;
+  }
+
+  form {
+    width: 90%;
+  }
+
+  form input,
+  form textarea {
+    width: 18rem;
+    font-size: 14px;
+  }
+
+  form button {
+    width: 7rem;
+    height: 2.5rem;
+    margin-left: 10%;
+    font-size: 16px;
+  }
+}

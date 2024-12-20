@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Montserrat:ital,wght@0,600;1,600&display=swap');
+
+.Project-con {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: center;
+  margin: 200px 0;
+  align-items: center;
+  padding-bottom: 5px;
+}
+
+.Project-con h1 {
+  padding-bottom: 24px;
+}
+
+
+.Project-con__Projects {
+  display: flex;
+  width: 60vw;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  justify-content: center; /* Ensure cards are spaced out evenly */
+  align-items: center;
+}
+
+.projectcon-card {
+  width: 25%;
+  height: auto;
+  background-color: white;
+  border: 2px solid rgb(6, 50, 100);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  margin: 10px; /* Add margin for spacing between cards */
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .Project-con__Projects {
+    width: 80vw;
+  }
+
+  .projectcon-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 992px) {
+  .Project-con__Projects {
+    width: 90vw;
+  }
+
+  .projectcon-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .Project-con__Projects {
+    width: 100vw;
+  }
+
+  .projectcon-card {
+    width: 100%;
+  }
+}
