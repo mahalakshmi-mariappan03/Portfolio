@@ -9,14 +9,14 @@ const ProjectContainer = () => {
             title: "The PostBox",
             technologies :" React JS, Node JS, MongoDB",
             describe: "Developed a messaging system integrated with a postbox. This application leverages React and Redux for state management, utilizing hooks like useState. It supports API calls and CRUD operations, with data stored in a MongoDB database.",
-            link: "www.google.com"
+            link: "https://mahalakshmi-mariappan.github.io/Postbox/"
         },
         {
             img: "/image/cute-happy-nuts-cartoon-character-peanut-hazelnut-walnut-brazil-nut-pistachio-cashew-pecan-almond-characters_92289-1216.jpg",
-            title: "The PostBox",
+            title: "Healthy Life - Online Nuts Shop",
             technologies :"HTML,CSS,Bootstrap,Javascript",
-            describe: "Developed a messaging system integrated with a postbox. This application leverages React and Redux for state management, utilizing hooks like useState. It supports API calls and CRUD operations, with data stored in a MongoDB database.",
-            link: "www.google.com"
+            describe: "This project is a responsive static webpage for an online nuts shop. It features a user-friendly interface and a clean design.  ",
+            link: "https://github.com/Mahalakshmi-Mariappan/Responsive-Design"
         },
     ];
 
