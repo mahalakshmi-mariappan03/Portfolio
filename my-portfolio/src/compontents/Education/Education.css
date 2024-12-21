@@ -20,8 +20,8 @@
   font-family: "Montserrat", sans-serif;
   color: white;
 }
-
 .education h2 {
+  
   text-align: left;
   letter-spacing: 1px;
   font-size: 25px;
@@ -54,7 +54,9 @@
   height: auto; 
   color: white;
   text-align: left;
-  animation: appear1 1s ease-in-out forwards!important; /* Added duration and easing */
+  animation: appear1 linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
   display: flex;
   align-items: center;
 }
