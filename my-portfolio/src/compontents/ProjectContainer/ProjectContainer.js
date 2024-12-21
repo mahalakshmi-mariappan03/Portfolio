@@ -16,7 +16,7 @@ const ProjectContainer = () => {
             title: "Healthy Life - Online Nuts Shop",
             technologies :"HTML,CSS,Bootstrap,Javascript",
             describe: "This project is a responsive static webpage for an online nuts shop. It features a user-friendly interface and a clean design.  ",
-            link: "https://github.com/Mahalakshmi-Mariappan/Responsive-Design"
+            link: "https://mahalakshmi-mariappan.github.io/Responsive-Design/"
         },
     ];
 
